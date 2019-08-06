@@ -22,21 +22,24 @@ import java.util.List;
 @Api(value="mongodb的测试类")
 public class MongoTestController {
 
-//    @Autowired
-//    private UserService userService;
-//
-//    @RequestMapping(value = "/findAllUser" ,method = RequestMethod.GET)
-//    @ApiOperation(value="获取所有的用户", notes="获取所有的用户")
-//    public List<User> findAllUser(){
-//        return userService.findAllUser();
-//    }
-//
-//    @RequestMapping(value = "/addUser" ,method = RequestMethod.PUT)
-//    @ApiOperation(value="新增用户", notes="获取所有的用户")
-//    @ApiImplicitParam(paramType="add", name = "User", value = "用户", required = true, dataType = "Integer")
-//    public User addUser(User user){
-//        userService.addUser(user);
-//        return user;
-//    }
+    @Autowired
+    private UserService userService;
+
+    @RequestMapping(value = "/findAllUser" ,method = RequestMethod.GET)
+    @ApiOperation(value="获取所有的用户", notes="获取所有的用户")
+    public List<User> findAllUser(){
+        return userService.findAllUser();
+    }
+
+    @RequestMapping(value = "/addUser" ,method = RequestMethod.GET)
+    @ApiOperation(value="新增用户", notes="获取所有的用户")
+    @ApiImplicitParam(paramType="add", name = "User", value = "用户", required = true, dataType = "Integer")
+    public User addUser(User user){
+        user.name = "xy";
+        user.password = "123";
+        user.userInfo = new UserInfo("yy","123");
+        userService.addUser(user);
+        return user;
+    }
 
 }

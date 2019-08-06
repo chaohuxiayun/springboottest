@@ -1,6 +1,6 @@
 package pers.xy.mongodbtest;
 
-//import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.MongoTemplate;
 
 /**
  * @Description
@@ -9,10 +9,10 @@ package pers.xy.mongodbtest;
  */
 public class MongoDBTest {
 
-//    private MongoTemplate mongoTemplate;
-//
-//    public void test(){
-//
-//    }
+    private MongoTemplate mongoTemplate;
+
+    public void test(){
+
+    }
 
 }

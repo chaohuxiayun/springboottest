@@ -9,7 +9,7 @@ import org.springframework.data.annotation.Id;
  */
 public class BaseEntity {
 
-//    @Id
-//    private String id;
-//    private Long createTime;
+    @Id
+    private String id;
+    private Long createTime;
 }
